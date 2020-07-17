@@ -15,7 +15,7 @@ import { useInjectReducer } from 'utils/injectReducer';
 import makeSelectSagaExample from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import fetchUserAction from './actions';
+import { fetchUserAction } from './actions';
 export function SagaExample({ dispatch }) {
   useInjectReducer({ key: 'sagaExample', reducer });
   useInjectSaga({ key: 'sagaExample', saga });

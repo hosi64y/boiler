@@ -1,16 +1,17 @@
-// import { take, call, put, select, takeLatest } from 'redux-saga/effects';
-import { call, put, select, takeLatest } from 'redux-saga/effects';
+import { take, call, put, select, takeLatest } from 'redux-saga/effects';
+// import { call, put, select, takeLatest } from 'redux-saga/effects';
 
-import FETCH_USER from './constants';
+import { FETCH_USER } from './constants';
 // Individual exports for testing
 export function* sagaExampleSaga() {
   // See example in containers/HomePage/saga.js
 }
-export function* fetchUser() {
-  console.log('dido dido');
-  yield put({ type: FETCH_USER, user_id: 1 });
+export function* fetchUser(obj) {
+  // console.log(id)
+  yield put({ type: FETCH_USER, user: "ahmad" });
 }
 
-export default function* saga() {
+export default function* sagas() {
+
   yield takeLatest(FETCH_USER, fetchUser);
 }
