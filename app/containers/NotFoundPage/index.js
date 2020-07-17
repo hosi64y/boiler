@@ -15,6 +15,7 @@ export default function NotFound() {
     <h1>
       <FormattedMessage {...messages.header} />
       این صفحه برای شاخه ی مستر می باشد
+      <span>hi</span>
     </h1>
   );
 }
