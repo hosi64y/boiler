@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <h1>
       <FormattedMessage {...messages.header} />
-      salllllllam
+      salllllllami
     </h1>
   );
 }
