@@ -14,6 +14,7 @@ export default function NotFound() {
   return (
     <h1>
       <FormattedMessage {...messages.header} />
+      <span>hi</span>
     </h1>
   );
 }
