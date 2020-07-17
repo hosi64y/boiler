@@ -15,12 +15,19 @@ import { useInjectReducer } from 'utils/injectReducer';
 import makeSelectSagaExample from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-
-export function SagaExample() {
+import fetchUserAction from './actions';
+export function SagaExample({ dispatch }) {
   useInjectReducer({ key: 'sagaExample', reducer });
   useInjectSaga({ key: 'sagaExample', saga });
+  return (
+    <>
+      <div>Saga Page Wellcome!</div>
+      <button onClick={() => dispatch(fetchUserAction(2))}>کلیک ساگا</button>
 
-  return <div>Saga Page Wellcome!</div>;
+    </>)
+
+
+
 }
 
 SagaExample.propTypes = {
